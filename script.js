@@ -28,7 +28,7 @@ function wallGet(owner_id)
           console.log(r.response);
       	  $('.wall_gets')
       	  .html('<img src="' + r.response[1].media.thumb_src + '"/><br/>'
-      	  	     + r.response[1].text
+      	  	     + '<div class="wall_text">' + r.response[1].text + '</div>'
       	  	   );
       }
    });
