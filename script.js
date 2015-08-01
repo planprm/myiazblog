@@ -13,8 +13,6 @@ function getMembers(group_id) {
 				.html('<img src="' + r.response[0].photo_50 + '"/><br/>' 
 					+ r.response[0].name
 					+ '<br/>Участников: ' + r.response[0].members_count);
-				// получем участников группы и пишем в массив membersGroups
-				getMembers20k(group_id, r.response[0].members_count);
 			}
 	});
 }
