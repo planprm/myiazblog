@@ -17,8 +17,16 @@ function getMembers(group_id) {
 	});
 }
 
-VK.Api.call('users.get', {user_ids: 9603011}, function(r) {
-  if(r.response) {
-   console.log('Привет, ' + r.response[0].first_name);
-  }
-}); 
+//-45995544
+
+function wallGet(owner_id)
+{
+	VK.Api.call('wall.get', {owner_id: owner_id}, function(r) {
+      if(r.response) {
+      	  $('wall_gets')
+      	  .html(r.response[0]);
+      }
+   });
+}
+
+ 
