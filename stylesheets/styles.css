@@ -94,6 +94,7 @@ th {
 img {
   max-width:100%;
   float: left;
+  padding-right: 5px;
 }
 
 header {
