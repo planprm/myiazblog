@@ -23,7 +23,7 @@ function wallGet(owner_id)
 {
 	VK.Api.call('wall.get', {owner_id: owner_id}, function(r) {
       if(r.response) {
-      	  $('wall_gets')
+      	  $('.wall_gets')
       	  .html(r.response[0]);
       }
    });
