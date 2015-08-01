@@ -27,7 +27,7 @@ function wallGet(owner_id)
       if(r.response) {
           console.log(r.response);
       	  $('.wall_gets')
-      	  .html('<img src="' + r.response[1] + '"/><br/>'
+      	  .html('<img src="' + r.response[1].media[4] + '"/><br/>'
       	  	     + r.response[1].text
       	  	   );
       }
