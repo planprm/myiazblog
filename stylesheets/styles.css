@@ -45,6 +45,11 @@ a small {
   display:block;
 }
 
+.wall_gets
+{
+  display: block;
+}
+
 .wrapper {
   width:860px;
   margin:0 auto;
