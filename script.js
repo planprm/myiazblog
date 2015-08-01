@@ -21,9 +21,11 @@ function getMembers(group_id) {
 
 wallGet(-45995544);
 
+var countNum = 5;
+
 function wallGet(owner_id)
 {
-	VK.Api.call('wall.get', {owner_id: owner_id}, function(r) {
+	VK.Api.call('wall.get', {owner_id: owner_id/*, count: countNum*/}, function(r) {
       if(r.response) {
           console.log(r.response);
       	  $('.wall_gets')
