@@ -50,8 +50,14 @@ a small {
   margin:0 auto;
 }
 
+.left
+{
+  float: left;
+}
+
 .wall_text
 {
+  padding: 5px;
   float: left;
 }
 
