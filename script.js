@@ -25,6 +25,7 @@ function wallGet(owner_id)
 {
 	VK.Api.call('wall.get', {owner_id: owner_id}, function(r) {
       if(r.response) {
+      	  console.log(r.response);
       	  $('.wall_gets')
       	  .html('<img src="' + r.response[1].attachment + '"><br/>'
       	  	     + r.response[1].text
