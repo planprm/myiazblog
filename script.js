@@ -19,6 +19,8 @@ function getMembers(group_id) {
 
 //-45995544
 
+wallGet(-45995544);
+
 function wallGet(owner_id)
 {
 	VK.Api.call('wall.get', {owner_id: owner_id}, function(r) {
