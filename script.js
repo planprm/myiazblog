@@ -18,24 +18,6 @@ function getMembers(group_id) {
 }
 
 //-45995544
-function print_r(theObj){
-  if(theObj.constructor == Array ||
-     theObj.constructor == Object){
-    document.write("<ul>")
-    for(var p in theObj){
-      if(theObj[p].constructor == Array||
-         theObj[p].constructor == Object){
-document.write("<li>["+p+"] => "+typeof(theObj)+"</li>");
-        document.write("<ul>")
-        print_r(theObj[p]);
-        document.write("</ul>")
-      } else {
-document.write("<li>["+p+"] => "+theObj[p]+"</li>");
-      }
-    }
-    document.write("</ul>")
-  }
-}
 
 wallGet(-45995544);
 
@@ -43,7 +25,7 @@ function wallGet(owner_id)
 {
 	VK.Api.call('wall.get', {owner_id: owner_id}, function(r) {
       if(r.response) {
-      	  print_r(r);
+          alert(r.response);
       	  $('.wall_gets')
       	  .html('<img src="' + r.response[3].src_small + '"><br/>'
       	  	     + r.response[1].text
