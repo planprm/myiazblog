@@ -19,4 +19,3 @@ function getMembers(group_id) {
 	});
 }
 
-}
