@@ -28,10 +28,13 @@ function wallGet(owner_id)
 	VK.Api.call('wall.get', {owner_id: owner_id, count: countNum}, function(r) {
       if(r.response) {
           console.log(r.response);
-      	  $('.wall_gets')
-      	  .html('<div class="left"><img src="' + r.response[1].media.thumb_src + '"/></div><br/>'
-      	  	     + '<div class="wall_text">' + r.response[1].text + '</div>'
-      	  	   );
+	  for(var i=0; i < 20; i++)
+	  {
+      	     $('.wall_gets')
+      	     .html('<div class="left"><img src="' + r.response[i].media.thumb_src + '"/></div><br/>'
+      	  	     + '<div class="wall_text">' + r.response[i].text + '</div>'
+      	      );
+	  }
       }
    });
 }
