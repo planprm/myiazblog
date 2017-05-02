@@ -28,6 +28,7 @@ function wallGet(owner_id)
 	VK.Api.call('wall.get', {owner_id: owner_id, count: countNum}, function(r) {
       if(r.response) {
           console.log(r.response);
+	  $('.wall_gets').html(r.response);    
 	  for(var i=0; i < 20; i++)
 	  {
       	     $('.wall_gets')
