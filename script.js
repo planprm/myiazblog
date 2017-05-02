@@ -29,14 +29,11 @@ function wallGet(owner_id)
       if(r.response) {
           console.log(r.response);
 	  $('.wall_gets').html(r.response);    
-	  for(var i=1; i < 20; i++)
-	  {
-      	     $('.wall_gets')
-      	     .html(
-		     '<div class="left"><img src="' + r.response[i].media.thumb_src + '"/></div><br/>'
-      	  	      + '<div class="wall_text">' + r.response[i].text + '</div>'
-      	      );
-	  }
+      	  $('.wall_gets')
+      	  .html(
+		'<div class="left"><img src="' + r.response[i].media.thumb_src + '"/></div><br/>'
+      	  	+ '<div class="wall_text">' + r.response[i].text + '</div>'
+      	  );
       }
    });
 }
