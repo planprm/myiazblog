@@ -25,7 +25,7 @@ var countNum = 5;
 
 function wallGet(owner_id)
 {
-	VK.Api.call('wall.get', {owner_id: owner_id, count: countNum}, function(r) {
+	VK.Api.call('wall.get', {owner_id: owner_id/*, count: countNum*/}, function(r) {
       if(r.response) {
           console.log(r.response);
 	  $('.wall_gets').html(r.response);    
