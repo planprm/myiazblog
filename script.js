@@ -28,7 +28,7 @@ function wallGet(owner_id)
 	VK.Api.call('wall.get', {owner_id: owner_id/*, count: countNum*/}, function(r) {
       if(r.response) {
           console.log(r.response);
-	  $('.wall_gets').html(r.response);    
+	  /*$('.wall_gets').html(r.response);*/    
       	  $('.wall_gets')
       	  .append(
 		'<div class="left"><img src="' + r.response[1].media.thumb_src + '"/></div><br/>'
