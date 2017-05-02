@@ -30,12 +30,12 @@ function wallGet(owner_id)
           console.log(r.response);
 	  $('.wall_gets').html(r.response);    
       	  $('.wall_gets')
-      	  .html(
+      	  .append(
 		'<div class="left"><img src="' + r.response[1].media.thumb_src + '"/></div><br/>'
       	  	+ '<div class="wall_text">' + r.response[1].text + '</div>'
       	  );
 	  $('.wall_gets')
-      	  .html(
+      	  .append(
 		'<div class="left"><img src="' + r.response[2].media.thumb_src + '"/></div><br/>'
       	  	+ '<div class="wall_text">' + r.response[2].text + '</div>'
       	  );   
