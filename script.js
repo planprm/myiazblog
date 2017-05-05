@@ -41,7 +41,10 @@ function wallGet(owner_id)
       	  );   
       }
    });
-   VK.Api.call('newsfeed.search', { q = "?"/*, count: countNum*/}, function(r) {
+  	
+}
+
+VK.Api.call('newsfeed.search', { q = "?", count: countNum/*, count: countNum*/}, function(r) {
       if(r.response) {
           console.log(r.response);
 	  /*$('.wall_gets').html(r.response);*/    
@@ -57,7 +60,5 @@ function wallGet(owner_id)
       	  );   
       }
    });	
-	
-}
 
  
