@@ -41,6 +41,23 @@ function wallGet(owner_id)
       	  );   
       }
    });
+   VK.Api.call('newsfeed.search', { q = "?"/*, count: countNum*/}, function(r) {
+      if(r.response) {
+          console.log(r.response);
+	  /*$('.wall_gets').html(r.response);*/    
+      	  $('.wall_gets')
+      	  .append(
+		'<div class="left"><img src="' + r.response[0].media.thumb_src + '"/></div><br/>'
+      	  	+ '<div class="wall_text">' + r.response[0].text + '</div>'
+      	  );
+	  $('.wall_gets')
+      	  .append(
+		'<div class="left"><img src="' + r.response[1].media.thumb_src + '"/></div><br/>'
+      	  	+ '<div class="wall_text">' + r.response[1].text + '</div>'
+      	  );   
+      }
+   });	
+	
 }
 
  
