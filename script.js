@@ -59,6 +59,26 @@ function wallGet(owner_id)
       	  	+ '<div class="wall_text">' + r.response[1].text + '</div>'
       	  );   
       }
-   });*/	
+   });*/
+  FB.init({
+      appId      : '121441791750862',
+      xfbml      : true,
+      version    : 'v2.9'
+    });
+  FB.AppEvents.logPageView();
+
+  FB.api(
+    "/search",
+    {
+        "type": "topic",
+        "q": "lebron james",
+        "fields": "id,name,page"
+    },
+    function (response) {
+      if (response && !response.error) {
+        /* handle the result */
+  console.log(response);
+      }
+    }
    
  
