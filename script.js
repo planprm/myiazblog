@@ -88,5 +88,6 @@ function wallGet(owner_id)
   console.log(response);
       }
     }
+);
    
  
