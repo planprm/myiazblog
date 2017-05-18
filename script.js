@@ -60,7 +60,7 @@ function wallGet(owner_id)
       	  );   
       }
    });*/
-  FB.init({
+  /*FB.init({
       appId      : '121441791750862',
       xfbml      : true,
       version    : 'v2.9'
@@ -84,10 +84,10 @@ function wallGet(owner_id)
     },
     function (response) {
       if (response && !response.error) {
-        /* handle the result */
+        /* handle the result 
   console.log(response);
       }
     }
-);
+);*/
    
  
